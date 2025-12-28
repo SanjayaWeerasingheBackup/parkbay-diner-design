@@ -2,16 +2,18 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import interior2 from "@/assets/interior2.jpg";
-import interior3 from "@/assets/interior3.jpg";
-import interior4 from "@/assets/interior4.jpg";
-import interior5 from "@/assets/interior5.jpg";
+import interior6 from "@/assets/interior6.jpg";
+import interior9 from "@/assets/interior9.jpg";
+import food3 from "@/assets/food3.jpg";
+import food9 from "@/assets/food9.jpg";
+import interior7 from "@/assets/interior7.jpg";
 
 const galleryImages = [
-  { src: interior2, alt: "Parkbay Interior - Modern seating area" },
-  { src: interior3, alt: "Parkbay Interior - Ring lights and dining area" },
-  { src: interior4, alt: "Parkbay Interior - Cozy booth seating" },
-  { src: interior5, alt: "Parkbay Interior - Rustic corner" },
+  { src: interior9, alt: "Modern dining with ring lights" },
+  { src: food3, alt: "Crispy fried chicken" },
+  { src: interior6, alt: "Dazzle with Flavor interior" },
+  { src: food9, alt: "Stir fried noodles" },
+  { src: interior7, alt: "Elegant wall art dining" },
 ];
 
 const GallerySection = () => {
@@ -29,18 +31,18 @@ const GallerySection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-primary font-display italic text-lg">Our Space</span>
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mt-2 mb-6">
-            Step Inside
+          <span className="text-primary font-display italic text-lg">Fun Shots</span>
+          <h2 className="font-display text-4xl md:text-6xl font-bold text-foreground mt-2 mb-6 tracking-wide">
+            STEP INSIDE
           </h2>
           <div className="section-divider" />
           <p className="text-muted-foreground mt-6 max-w-2xl mx-auto">
-            Experience our thoughtfully designed spaces—from the cozy rope-lit corners to our modern main dining hall, every detail has been crafted for your comfort.
+            Experience our thoughtfully designed spaces—from the cozy corners to our modern main dining hall, every detail has been crafted for your comfort.
           </p>
         </motion.div>
 
-        {/* Gallery Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        {/* Gallery Grid - Masonry Style */}
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
           {galleryImages.map((image, index) => (
             <motion.div
               key={index}
@@ -49,8 +51,8 @@ const GallerySection = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
-              className={`relative overflow-hidden rounded-sm cursor-pointer transition-all duration-500 ${
-                index === 0 ? "col-span-2 row-span-2 aspect-square" : "aspect-square"
+              className={`relative overflow-hidden cursor-pointer ${
+                index === 0 ? "col-span-2 lg:col-span-2 aspect-video" : "aspect-square"
               }`}
             >
               <img
@@ -78,10 +80,9 @@ const GallerySection = () => {
         >
           <Link
             to="/gallery"
-            className="inline-flex items-center text-primary hover:text-primary/80 font-medium text-sm tracking-wide uppercase transition-colors group"
+            className="inline-flex items-center px-8 py-4 border-2 border-primary text-primary font-medium text-sm tracking-[0.15em] uppercase hover:bg-primary hover:text-primary-foreground transition-all duration-300"
           >
             View Full Gallery
-            <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
           </Link>
         </motion.div>
       </div>
