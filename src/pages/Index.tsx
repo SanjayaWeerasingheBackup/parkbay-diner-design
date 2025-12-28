@@ -1,13 +1,39 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Helmet } from "react-helmet-async";
+import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import AboutSection from "@/components/AboutSection";
+import MenuSection from "@/components/MenuSection";
+import GallerySection from "@/components/GallerySection";
+import CTASection from "@/components/CTASection";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <>
+      <Helmet>
+        <title>Parkbay Ceylon | Multi Style Cuisine Restaurant in Colombo</title>
+        <meta
+          name="description"
+          content="Experience exceptional multi-style cuisine at Parkbay Ceylon, Colombo's premier restaurant. Discover flavors from around the world in an elegant, modern setting."
+        />
+        <meta
+          name="keywords"
+          content="Parkbay, Ceylon, restaurant, Colombo, Sri Lanka, multi-style cuisine, dining, food"
+        />
+      </Helmet>
+
+      <div className="min-h-screen bg-background">
+        <Navbar />
+        <main>
+          <HeroSection />
+          <AboutSection />
+          <MenuSection />
+          <GallerySection />
+          <CTASection />
+        </main>
+        <Footer />
       </div>
-    </div>
+    </>
   );
 };
 
