@@ -9,9 +9,11 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-display text-lg font-bold">PB</span>
-              </div>
+              <img
+                src="/OIP.jpg"
+                alt="Parkbay Ceylon Logo"
+                className="w-12 h-12 rounded-full object-cover"
+              />
               <div>
                 <h3 className="font-display text-xl font-semibold text-foreground">PARKBAY</h3>
                 <span className="text-xs text-muted-foreground tracking-[0.2em] uppercase">Ceylon</span>

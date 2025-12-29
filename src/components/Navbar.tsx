@@ -41,12 +41,11 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-14 h-14 rounded-full bg-primary flex items-center justify-center transition-transform duration-300 group-hover:scale-105 shadow-lg shadow-primary/20">
-              <div className="text-center">
-                <span className="text-primary-foreground font-display text-xs font-bold block leading-none">PARK</span>
-                <span className="text-primary-foreground font-display text-xs font-bold block leading-none">BAY</span>
-              </div>
-            </div>
+            <img
+              src="/OIP.jpg"
+              alt="Park Bay Diner Logo"
+              className="w-14 h-14 rounded-full object-cover transition-transform duration-300 group-hover:scale-105 shadow-lg shadow-primary/20"
+            />
           </Link>
 
           {/* Desktop Navigation */}
